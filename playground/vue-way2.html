@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<div id="app"></div>
+		<script>
+			var div = document.querySelector('#app');
+			var viewModel = {};
+
+			// IIFE 즉시 실행 함수. 애플리케이션의 로직에 노출되지 않게 자체 실행되게 한다.
+			(function () {
+				function init() {
+					Object.defineProperty(viewModel, 'str', {
+						get: () => {
+							console.log('접근!');
+						},
+						set: (newVal) => {
+							console.log('할당', newVal);
+							render(newVal);
+						},
+					});
+				}
+
+				function render(val) {
+					div.innerHTML = val;
+				}
+
+				init();
+			})();
+		</script>
+	</body>
+</html>
