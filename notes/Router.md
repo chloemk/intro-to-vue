@@ -74,7 +74,7 @@ Vue 인스턴스에 router 인스턴스를 연결해야지만 사용할 수 있�
 # router-link
 
 페이지 이동을 위한 링크 태그입니다.
-router-link는 화면에 <a> 태그로 변환되서 나타납니다.
+router-link는 화면에 `<a>` 태그로 변환되서 나타납니다.
 
 ```html
 <div id="app">
