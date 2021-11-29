@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<div id="app">
+			<!-- <app-header v-bind:프롭스 속성 이름="상위 컴포넌트의 데이터 이름"></app-header> -->
+			<app-header v-bind:propsdata="num"></app-header>
+			<app-content v-on:pass="deliverNum"></app-content>
+		</div>
+
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+		<script>
+			var appHeader = {
+				template: '<div>header</header>',
+				props: ['propsdata'],
+			};
+
+			var appContent = {
+				// v-onClick을 하게되면 passNum이라는 메서드를 수행하게된다.
+				template:
+					'<div>content<button v-on:click="passNum">넘겨줘</button></div>',
+				methods: {
+					passNum: function () {
+						this.$emit('pass', 10);
+					},
+				},
+			};
+			new Vue({
+				el: '#app',
+				components: {
+					'app-header': appHeader,
+					'app-content': appContent,
+				},
+				data: {
+					num: 0,
+				},
+				methods: {
+					deliverNum: function (val) {
+						this.num = val; // num 속성에 넘어온 값을 담는다.
+					},
+				},
+			});
+		</script>
+	</body>
+</html>
