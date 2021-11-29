@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Axios</title>
+	</head>
+	<body>
+		<div id="app">
+			<button v-on:click="getData">get user</button>
+			<div>{{ users }}</div>
+		</div>
+
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+		<script>
+			new Vue({
+				el: '#app',
+				data: {
+					users: [],
+				},
+				methods: {
+					getData: function () {
+						//비동기 호출 전 this와 호출 후 this는 다르다. 콜 전 this는 인스턴스를 바라보는 this이고, then이후의 this는 실행컨텍스트가 바뀌면서 내용도 바뀐다.
+						var vm = this; //변수 vm에 this를 담아놓으면, 인스턴스를 바라보는 this를 콜 이후 then 안에서도 인스턴스를 가리키는 this를 참조할 수 있다.
+						axios
+							.get('https://jsonplaceholder.typicode.com/users/')
+							.then(function (response) {
+								console.log(response.data);
+								vm.users = response.data;
+							})
+							.catch(function (error) {
+								console.log(error);
+							});
+					},
+				},
+			});
+		</script>
+	</body>
+</html>
