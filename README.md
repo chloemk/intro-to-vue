@@ -73,5 +73,8 @@ VueRouter 인스턴스를 생성하여 라우터 옵션을 지정한 후 Vue 인
 
 ## 싱글 파일 컴포넌트
 
-.vue 파일이 내부적으로 어떻게 들어가는지 궁금하면 웹팩 공식문서 참고
-웹팩의 기능중에 뷰 로더가 있는데 싱글 파일 컴포넌트의 내용을 찢어서 브라우저가 이해할 수 있는 형태로 바꿔준다.
+.vue 파일이 내부적으로 어떻게 들어가는지에 대해선 웹팩 공식문서를 참고할 수 있습니다. webpack의 기능 중 Vue Loader라는 것이 있는데, Vue 컴포넌트를 일반적인 자바스크립트 모듈로 변환할 수 있는 로더 입니다.
+
+- props와 event emit 구현 복습
+
+> [Single File Component](https://github.com/chloemk/intro-to-vue/blob/main/notes/SingleFileComponent.md 'Note #8')
