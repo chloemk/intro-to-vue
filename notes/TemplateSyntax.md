@@ -43,7 +43,7 @@ const obj = ref({
 
 ## v-model
 
-<input>, <textarea>, <select>, components 등 form 입력 엘리먼트 값 또는 컴포넌트 출력의 값을 받아올 수 있습니다.
+`<input>`, `<textarea>`, `<select>`, components 등 form 입력 엘리먼트 값 또는 컴포넌트 출력의 값을 받아올 수 있습니다.
 `양방향 바인딩`을 생성합니다.
 
 ```js
