@@ -52,10 +52,6 @@ VueRouter 인스턴스를 생성하여 라우터 옵션을 지정한 후 Vue 인
 
 ---
 
-## HTTP 통신 라이브러리 (axios)
-
----
-
 ## 템플릿 문법
 
 화면을 조작하기 위한 뷰의 문법들을 의미한다. 크게 두가지가 존재한다.
@@ -63,11 +59,15 @@ VueRouter 인스턴스를 생성하여 라우터 옵션을 지정한 후 Vue 인
 - 데이터 바인딩 (Reacitvity와 비슷한 개념. 데이터의 변화에 따라서 화면에 반영해주는 것이 reactivity이고, 실제로 데이터를 화면에 엮어내는 부분이 데이터 바인딩이다.)
 - 뷰 디렉티브 (화면을 조작하기 위해서 뷰가 추가적으로 제공하는 문법. v- 이런 html속성으로 이루어져있다.)
 
+> [Template](https://github.com/chloemk/intro-to-vue/blob/main/notes/CLI.md 'Note #6')
+
 ---
 
 ## Vue CLI
 
-프로젝트를 생성할 때 명령어를 이용해서 생성하는 방식을 CLI라고 한다.
+프로젝트를 생성할 때 명령어를 이용해서 생성하는 방식을 CLI라고 합니다.
+
+> [Vue CLI](https://github.com/chloemk/intro-to-vue/blob/main/notes/CLI.md 'Note #7')
 
 ---
 
